@@ -7,6 +7,13 @@ var KTSignupGeneral = function() {
         init: function() {
             e = document.querySelector("#kt_sign_up_form"), t = document.querySelector("#kt_sign_up_submit"), r = KTPasswordMeter.getInstance(e.querySelector('[data-kt-password-meter="true"]')), a = FormValidation.formValidation(e, {
                 fields: {
+                  "organization-name": {
+                      validators: {
+                          notEmpty: {
+                              message: "Organization name is required"
+                          }
+                      }
+                  },
                     "display-name": {
                         validators: {
                             notEmpty: {
